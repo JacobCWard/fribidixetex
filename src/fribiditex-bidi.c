@@ -64,8 +64,8 @@ static const char *bidi_mirror_list[][2] =
 
 static const char *bidi_hack_list[][2] = 
 {
-	{"---","{\\bidiemdash}"},
-	{"--","{\\bidiendash}"},
+	{"---","{\\fribiditex@emdash}"},
+	{"--","{\\fribiditex@endash}"},
 	{NULL,NULL}
 };
 
@@ -73,18 +73,18 @@ static const char *bidi_hack_list[][2] =
 /* TAGS */
 /********/
 
-#define TAG_BIDI_ON			"%BIDION"
-#define TAG_BIDI_OFF		"%BIDIOFF"
-#define TAG_BIDI_NEW_TAG	"%BIDITAG"
-#define TAG_BIDI_LTR		"%BIDILTR"
-#define TAG_BIDI_DIC_TAG	"%BIDIDICTAG"
-#define TAG_BIDI_DIC_ENV	"%BIDIDICENV"
+#define TAG_BIDI_ON			"%unibidion"
+#define TAG_BIDI_OFF		"%unibidioff"
+#define TAG_BIDI_NEW_TAG	"%unibiditag"
+#define TAG_BIDI_LTR		"%unibidiLTR"
+#define TAG_BIDI_DIC_TAG	"%unibididictag"
+#define TAG_BIDI_DIC_ENV	"%unibididicenv"
 
-#define TAG_RTL			"\\R{"
-#define TAG_LTR			"\\L{"
+#define TAG_RTL			"\\fribiditex@RLE{"
+#define TAG_LTR			"\\fribiditex@LRE{"
 #define TAG_CLOSE		"}"
 
-#define TAG_LTR_NUM		"\\Lnum{"
+#define TAG_LTR_NUM		"\\fribiditex@LRE@numbers{"
 
 /***********************/
 
@@ -925,7 +925,7 @@ int bidi_grammar(FriBidiChar *in,char *tagname,char *format,
 	return 1;
 }
 
-void bidi_parse_biditex_command(FriBidiChar *in)
+void bidi_parse_fribiditex_command(FriBidiChar *in)
 {
 	FriBidiChar unicode[MAX_COMMAND_LEN];
 	char ascii[MAX_COMMAND_LEN];
@@ -949,7 +949,7 @@ void bidi_parse_biditex_command(FriBidiChar *in)
 		dict_add_tans(unicode,ascii,DICT_ENV);
 	}
 	else {
-		bidi_error("Unknown biditex command");
+		bidi_error("Unknown fribiditex command");
 	}
 }
 
@@ -964,7 +964,7 @@ int bidi_process(FriBidiChar *in,FriBidiChar *out,
 	int i,is_rtl;
 	
 	if(bidi_strieq_u_a(in,"%BIDI")) {
-		bidi_parse_biditex_command(in);
+		bidi_parse_fribiditex_command(in);
 		return 0;
 	}
 	
@@ -1002,7 +1002,7 @@ void bidi_finish(void)
 		utl_free(tmp);
 	}
 	if(bidi_mode != MODE_BIDIOFF) {
-		fprintf(stderr,"Warning: No %%BIDIOFF Tag at the end of the file\n");
+		fprintf(stderr,"Warning: No %%unibidioff Tag at the end of the file\n");
 	}
 }
 

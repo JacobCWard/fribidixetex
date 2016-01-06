@@ -14,7 +14,7 @@
 void help(void)
 {
 	fprintf(stderr,
-			"usage: biditex [ parameters ] [ inputfilename ]\n"
+			"usage: fribiditex [ parameters ] [ inputfilename ]\n"
 			"       -o file_name.tex             - output file name\n"
 			"       -e utf8 | iso8859-8 | cp1255 - encoding\n"
 			"       -t utf8 | iso8859-8 | cp1255 - output encoding\n"
@@ -22,7 +22,7 @@ void help(void)
 			"                this is usefull for latex2html that has native\n"
 			"                bidirectional support\n"
 			"       -m       replace '--'  &   '---'\n"
-			"                by   '\\L{--} & \\L{'---'}\n"
+			"                by   '\\fribiditex@LRE{--} & \\fribiditex@LRE{'---'}\n"
 			"       -n       no mirroring - do not mirror parethesis\n"
 			"                for engines that does that natively (like XeTeX)\n"
 	);
