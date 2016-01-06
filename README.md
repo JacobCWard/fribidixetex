@@ -25,7 +25,7 @@ Here a sample `xepersian` document:
     \settextfont{Yas}
     \let\fribiditexLRE\lr
     \let\fribiditexRLE\rl
-    \letfribiditexLREnumbers\relax
+    \let\fribiditexLREnumbers\relax
     %BIDION
     \begin{document}    
     ...
