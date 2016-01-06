@@ -1,4 +1,6 @@
 /*********************************/
+/* Copyright Vafa Khalighi 2016 */
+/* Copyright Khaled Hosny 2015 */
 /* Copyright Artyom Tonkikh 2007 */
 /* License GPL                   */
 /*********************************/
