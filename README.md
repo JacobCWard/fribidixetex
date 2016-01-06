@@ -18,7 +18,7 @@ FriBidiTeX understands some special comments to control its behaviour:
 Example
 -------
 
-Here a sample `xepersian` document:
+Here is a sample `xepersian` document:
 
 ````latex
 \documentclass{article}

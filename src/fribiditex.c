@@ -22,7 +22,7 @@ void help(void)
 			"                this is usefull for latex2html that has native\n"
 			"                bidirectional support\n"
 			"       -m       replace '--'  &   '---'\n"
-			"                by   '\\fribiditex@LRE{--} & \\fribiditex@LRE{'---'}\n"
+			"                by   '\\fribiditexLRE{--} & \\fribiditexLRE{'---'}\n"
 			"       -n       no mirroring - do not mirror parethesis\n"
 			"                for engines that does that natively (like XeTeX)\n"
 	);
