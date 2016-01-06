@@ -64,8 +64,8 @@ static const char *bidi_mirror_list[][2] =
 
 static const char *bidi_hack_list[][2] = 
 {
-	{"---","{\\fribiditex@emdash}"},
-	{"--","{\\fribiditex@endash}"},
+	{"---","{\\fribiditexemdash}"},
+	{"--","{\\fribiditexendash}"},
 	{NULL,NULL}
 };
 
@@ -73,18 +73,18 @@ static const char *bidi_hack_list[][2] =
 /* TAGS */
 /********/
 
-#define TAG_BIDI_ON			"%unibidion"
-#define TAG_BIDI_OFF		"%unibidioff"
-#define TAG_BIDI_NEW_TAG	"%unibiditag"
-#define TAG_BIDI_LTR		"%unibidiLTR"
-#define TAG_BIDI_DIC_TAG	"%unibididictag"
-#define TAG_BIDI_DIC_ENV	"%unibididicenv"
+#define TAG_BIDI_ON			"%BIDION"
+#define TAG_BIDI_OFF		"%BIDIOFF"
+#define TAG_BIDI_NEW_TAG	"%BIDITAG"
+#define TAG_BIDI_LTR		"%BIDILTR"
+#define TAG_BIDI_DIC_TAG	"%BIDIDICTAG"
+#define TAG_BIDI_DIC_ENV	"%BIDIDICENV"
 
-#define TAG_RTL			"\\fribiditex@RLE{"
-#define TAG_LTR			"\\fribiditex@LRE{"
+#define TAG_RTL			"\\fribiditexRLE{"
+#define TAG_LTR			"\\fribiditexLRE{"
 #define TAG_CLOSE		"}"
 
-#define TAG_LTR_NUM		"\\fribiditex@LRE@numbers{"
+#define TAG_LTR_NUM		"\\fribiditexLREnumbers{"
 
 /***********************/
 
@@ -1002,7 +1002,7 @@ void bidi_finish(void)
 		utl_free(tmp);
 	}
 	if(bidi_mode != MODE_BIDIOFF) {
-		fprintf(stderr,"Warning: No %%unibidioff Tag at the end of the file\n");
+		fprintf(stderr,"Warning: No %%BIDIOFF Tag at the end of the file\n");
 	}
 }
 

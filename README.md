@@ -11,9 +11,9 @@ can then be processed by the TeX engine to produce the final output.
 
 FriBidiTeX understands some special comments to control its behaviour:
 
-* `%unibidion`: activate FriBidiTeX special handling.
-* `%unibidioff`: stop it
-* `%unibidiLTR`: the document is mainly left-to-right with some right-to-left text.
+* `%BIDION`: activate FriBidiTeX special handling.
+* `%BIDIOFF`: stop it
+* `%BIDILTR`: the document is mainly left-to-right with some right-to-left text.
 
 Example
 -------
@@ -23,16 +23,14 @@ Here a sample `xepersian` document:
     \documentclass{article}
     \usepackage{xepersian}
     \settextfont{Yas}
-    \makeatletter
-    \let\fribiditex@LRE\lr
-    \let\fribiditex@RLE\rl
-    \makeatother
-    
-    %unibidion
+    \let\fribiditexLRE\lr
+    \let\fribiditexRLE\rl
+    \letfribiditexLREnumbers\relax
+    %BIDION
     \begin{document}    
     ...
     \end{document}
-    %unibidioff
+    %BIDIOFF
 
 This can be processed with FriBidiTeX, then by XeTeX to produce final PDF:
 
