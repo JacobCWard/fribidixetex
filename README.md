@@ -49,8 +49,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 %BIDIOFF
 ````
 
-This can be processed with FriBidiTeX, then by XeTeX to produce final PDF:
+This can be processed with FriBidiTeX, then by XeTeX to produce the final pdf:
 
     fribiditex -n test.tex -o test.ltx
     xelatex test.ltx
-

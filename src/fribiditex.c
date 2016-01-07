@@ -26,7 +26,7 @@ void help(void)
 			"       -m       replace '--'  &   '---'\n"
 			"                by   '\\fribiditexLRE{--} & \\fribiditexLRE{'---'}\n"
 			"       -n       no mirroring - do not mirror parethesis\n"
-			"                for engines that does that natively (like XeTeX)\n"
+			"                for engines that do that natively (like XeTeX)\n"
 	);
 	exit(1);
 }
@@ -42,7 +42,7 @@ void read_parameters(int argc,char **argv,
 	int i;
 	int cnt1=0,cnt2=0,cnt3=0,cnt4=0;
 	int *ptr;
-	
+
 	for(i=1;i<argc;i++){
 		if(strcmp(argv[i],"-h")==0) {
 			help();
@@ -68,7 +68,7 @@ void read_parameters(int argc,char **argv,
 			if(i+1>=argc){
 				help();
 			}
-			
+
 			if(argv[i][1]=='e'){
 				ptr=encoding;
 				cnt2++;
@@ -118,11 +118,11 @@ int main(int argc,char **argv)
 	int no_mirroring = 0;
 
 	FILE *f_in,*f_out;
-	
-	/****************** 
-	 * Inicialization * 
+
+	/******************
+	 * Inicialization *
 	 ******************/
-		
+
 	read_parameters(argc,argv,&fname_in,&fname_out,
 			&encoding,&out_encoding,
 			&replace_minus,&transalte_only,
@@ -150,35 +150,35 @@ int main(int argc,char **argv)
 			exit(1);
 		}
 	}
-	
-	
+
+
 	/*************
 	 * Main loop *
 	 *************/
-	
+
 	io_init();
 
 	bidi_init(f_out);
 
 	while(io_read_line(text_line_in,encoding,f_in)) {
-		
+
 		if(bidi_process(text_line_in,text_line_out,
 							replace_minus,transalte_only,no_mirroring))
 		{
 			/*If there is something to print */
 			io_write_line(text_line_out,out_encoding,f_out);
 		}
-		
+
 	}
-	
+
 	/**********
 	 * Finish *
 	 **********/
-	
+
 	if(f_out!=stdout) fclose(f_out);
 	if(f_in!=stdin) fclose(f_in);
-	
+
 	bidi_finish();
-	
+
 	return 0;
 }
