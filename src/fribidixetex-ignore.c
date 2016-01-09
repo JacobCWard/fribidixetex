@@ -1,8 +1,8 @@
 /* All the tags that their content 
- * should be ignored by fribiditex */
+ * should be ignored by fribidixetex */
 const char *ignore_tags_list[] = 
 {
-	"begin", "end", "fribiditexRLE", "fribiditexLRE", "fribiditexLREnumbers",
+	"begin", "end", "fribidixetexRLE", "fribidixetexLRE", "fribidixetexLREnumbers",
 	"input", "include", "includegraphics", "includeonly",
 	"hspace", "vspace", "hspace*", "vspace*",
 	"ref", "label", "includegraphics",

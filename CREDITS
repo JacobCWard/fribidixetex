@@ -1,4 +1,4 @@
-FriBidiTeX --- A pre-processor for TeX files to support unicode bidirectional algorithm
+FriBidiXeTeX --- A pre-processor for XeTeX files to support unicode bidirectional algorithm
 ================================================================
 Copyright (C) 2016  Vafa Khalighi
 
@@ -17,5 +17,5 @@ Some Notes:
   * Khaled Hosny made few changes to the `BiDiTeX' project to
     make it compatible with XeTeX.
   
-  * I renamed the project to `FriBidiTeX', removed unused files, 
+  * I renamed the project to `FriBidiXeTeX', removed unused files, 
     renamed filenames, and made few other changes.

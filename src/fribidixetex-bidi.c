@@ -1,13 +1,13 @@
-#include "fribiditex-defines.h"
-#include "fribiditex-bidi.h"
-#include "fribiditex-util.h"
-#include "fribiditex-dict.h"
-#include "fribiditex-ignore.h"
+#include "fribidixetex-defines.h"
+#include "fribidixetex-bidi.h"
+#include "fribidixetex-util.h"
+#include "fribidixetex-dict.h"
+#include "fribidixetex-ignore.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "fribiditex-io.h"
+#include "fribidixetex-io.h"
 
 #ifndef TRUE
 #define TRUE 1
@@ -64,8 +64,8 @@ static const char *bidi_mirror_list[][2] =
 
 static const char *bidi_hack_list[][2] = 
 {
-	{"---","{\\fribiditexemdash}"},
-	{"--","{\\fribiditexendash}"},
+	{"---","{\\fribidixetexemdash}"},
+	{"--","{\\fribidixetexendash}"},
 	{NULL,NULL}
 };
 
@@ -80,11 +80,11 @@ static const char *bidi_hack_list[][2] =
 #define TAG_BIDI_DIC_TAG	"%BIDIDICTAG"
 #define TAG_BIDI_DIC_ENV	"%BIDIDICENV"
 
-#define TAG_RTL			"\\fribiditexRLE{"
-#define TAG_LTR			"\\fribiditexLRE{"
+#define TAG_RTL			"\\fribidixetexRLE{"
+#define TAG_LTR			"\\fribidixetexLRE{"
 #define TAG_CLOSE		"}"
 
-#define TAG_LTR_NUM		"\\fribiditexLREnumbers{"
+#define TAG_LTR_NUM		"\\fribidixetexLREnumbers{"
 
 /***********************/
 
@@ -925,7 +925,7 @@ int bidi_grammar(FriBidiChar *in,char *tagname,char *format,
 	return 1;
 }
 
-void bidi_parse_fribiditex_command(FriBidiChar *in)
+void bidi_parse_fribidixetex_command(FriBidiChar *in)
 {
 	FriBidiChar unicode[MAX_COMMAND_LEN];
 	char ascii[MAX_COMMAND_LEN];
@@ -949,7 +949,7 @@ void bidi_parse_fribiditex_command(FriBidiChar *in)
 		dict_add_tans(unicode,ascii,DICT_ENV);
 	}
 	else {
-		bidi_error("Unknown fribiditex command");
+		bidi_error("Unknown fribidixetex command");
 	}
 }
 
@@ -964,7 +964,7 @@ int bidi_process(FriBidiChar *in,FriBidiChar *out,
 	int i,is_rtl;
 	
 	if(bidi_strieq_u_a(in,"%BIDI")) {
-		bidi_parse_fribiditex_command(in);
+		bidi_parse_fribidixetex_command(in);
 		return 0;
 	}
 	

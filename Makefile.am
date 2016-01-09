@@ -2,16 +2,16 @@ NULL =
 
 
 bin_PROGRAMS = \
-  fribiditex \
+  fribidixetex \
   $(NULL)
 
-fribiditex_SOURCES = \
-  src/fribiditex-bidi.c \
-  src/fribiditex.c \
-  src/fribiditex-dict.c \
-  src/fribiditex-io.c \
-  src/fribiditex-util.c \
-  src/fribiditex-ignore.c \
+fribidixetex_SOURCES = \
+  src/fribidixetex-bidi.c \
+  src/fribidixetex.c \
+  src/fribidixetex-dict.c \
+  src/fribidixetex-io.c \
+  src/fribidixetex-util.c \
+  src/fribidixetex-ignore.c \
   $(NULL)
 
 AM_CPPFLAGS = \

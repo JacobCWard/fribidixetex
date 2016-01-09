@@ -9,14 +9,14 @@
 #include <stdlib.h>
 #include <fribidi/fribidi.h>
 
-#include "fribiditex-defines.h"
-#include "fribiditex-io.h"
-#include "fribiditex-bidi.h"
+#include "fribidixetex-defines.h"
+#include "fribidixetex-io.h"
+#include "fribidixetex-bidi.h"
 
 void help(void)
 {
 	fprintf(stderr,
-			"usage: fribiditex [ parameters ] [ inputfilename ]\n"
+			"usage: fribidixetex [ parameters ] [ inputfilename ]\n"
 			"       -o file_name.tex             - output file name\n"
 			"       -e utf8 | iso8859-8 | cp1255 - encoding\n"
 			"       -t utf8 | iso8859-8 | cp1255 - output encoding\n"
@@ -24,7 +24,7 @@ void help(void)
 			"                this is usefull for latex2html that has native\n"
 			"                bidirectional support\n"
 			"       -m       replace '--'  &   '---'\n"
-			"                by   '\\fribiditexLRE{--} & \\fribiditexLRE{'---'}\n"
+			"                by   '\\fribidixetexLRE{--} & \\fribidixetexLRE{'---'}\n"
 			"       -n       no mirroring - do not mirror parethesis\n"
 			"                for engines that do that natively (like XeTeX)\n"
 	);

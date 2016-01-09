@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <fribidi/fribidi.h>
-#include "fribiditex-defines.h"
+#include "fribidixetex-defines.h"
 
 int io_read_line(FriBidiChar *text,int encoding,FILE *f);
 void io_write_line(FriBidiChar *text,int encoding,FILE *f);

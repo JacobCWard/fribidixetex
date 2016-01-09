@@ -1,8 +1,8 @@
-AC_INIT([FriBidiTeX],
+AC_INIT([FriBidiXeTeX],
         [0.0.1],
-        [https://github.com/persian-tex/fribiditex/issues],
+        [https://github.com/persian-tex/fribidixetex/issues],
         [biditex],
-        [https://github.com/persian-tex/fribiditex])
+        [https://github.com/persian-tex/fribidixetex])
 
 AC_CONFIG_MACRO_DIR([m4])
 

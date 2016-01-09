@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "fribiditex-io.h"
+#include "fribidixetex-io.h"
 
 static char text_buffer[MAX_LINE_SIZE];
 int io_line_number;

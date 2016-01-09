@@ -1,16 +1,16 @@
 Installation:
 ============
 
-`fribiditex' uses the `fribidi' library and can be
+`fribidixetex' uses the `fribidi' library and can be
 installed on any operating system. 
 
-Hopefully, the `fribiditex' binary will be included
+Hopefully, the `fribidixetex' binary will be included
 in TeXLive and so you do not need to compile
 it yourself.
 
 
 
-Instructions to compile `fribiditex` on Mac OSX:
+Instructions to compile `fribidixetex` on Mac OSX:
 =====================================
 
   1) Install `xcode'.
@@ -25,7 +25,7 @@ Instructions to compile `fribiditex` on Mac OSX:
 
 
 
-Instructions to compile `fribiditex` on Linux (Debian/Ubuntu
+Instructions to compile `fribidixetex` on Linux (Debian/Ubuntu
 distributions) contributed by Ali Majdzadeh Kouhbani:
 =============================================
 

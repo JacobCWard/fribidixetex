@@ -1,17 +1,17 @@
-FriBidiTeX
+FriBidiXeTeX
 ========
 
-FriBidiTeX is a pre-processor for TeX files to support unicode bidirectional algorithm.
+FriBidiXeTeX is a pre-processor for XeTeX files to support unicode bidirectional algorithm.
 
 Usage
 -----
 
-To use FriBidiTeX, run the `fribiditex` command on the TeX file, the resulting file
-can then be processed by the TeX engine to produce the final output.
+To use FriBidiXeTeX, run the `fribidixetex` command on the XeTeX file, the resulting file
+can then be processed by the XeTeX engine to produce the final output.
 
-FriBidiTeX understands some special comments to control its behaviour:
+FriBidiXeTeX understands some special comments to control its behavior:
 
-* `%BIDION`: activate FriBidiTeX special handling.
+* `%BIDION`: activate FriBidiXeTeX special handling.
 * `%BIDIOFF`: stop it
 * `%BIDILTR`: the paragraph is mainly left-to-right with some right-to-left text.
 
@@ -25,9 +25,9 @@ Here is a sample `xepersian` document:
 \usepackage{xepersian}
 \settextfont{Yas}
 \setdigitfont{Yas}
-\let\fribiditexLRE\lr
-\let\fribiditexRLE\rl
-\let\fribiditexLREnumbers\relax
+\let\fribidixetexLRE\lr
+\let\fribidixetexRLE\rl
+\let\fribidixetexLREnumbers\relax
 %BIDION
 \begin{document}    
 این یک پاراگراف «پارسی» است به نام Simple text و این یک عدد 0887 به لاتین است.
@@ -49,7 +49,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 %BIDIOFF
 ````
 
-This can be processed with FriBidiTeX, then by XeTeX to produce the final pdf:
+This can be processed with FriBidiXeTeX, then by XeTeX to produce the final pdf:
 
-    fribiditex -n test.tex -o test.ltx
+    fribidixetex -n test.tex -o test.ltx
     xelatex test.ltx

@@ -1,5 +1,5 @@
-#include "fribiditex-dict.h"
-#include "fribiditex-defines.h"
+#include "fribidixetex-dict.h"
+#include "fribidixetex-defines.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

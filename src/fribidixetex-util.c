@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "fribiditex-util.h"
+#include "fribidixetex-util.h"
 
 void *utl_malloc(size_t size)
 {
