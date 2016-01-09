@@ -27,7 +27,7 @@ Here is a sample `xepersian` document:
 \setdigitfont{Yas}
 \let\fribidixetexLRE\lr
 \let\fribidixetexRLE\rl
-\let\fribidixetexLREnumbers\relax
+\let\fribidixetexLatindigits\lr
 %BIDION
 \begin{document}    
 این یک پاراگراف «پارسی» است به نام Simple text و این یک عدد 0887 به لاتین است.
