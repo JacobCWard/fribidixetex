@@ -84,7 +84,8 @@ static const char *bidi_hack_list[][2] =
 #define TAG_LTR			"\\fribidixetexLRE{"
 #define TAG_CLOSE		"}"
 
-#define TAG_LTR_NUM		"\\fribidixetexLREnumbers{"
+#define TAG_LATIN_DIGIT		"\\fribidixetexLatindigits{"
+#define TAG_PERSIAN_ARABIC_DIGIT		"\\fribidixetexPersianArabicdigits{"
 
 /***********************/
 
@@ -629,7 +630,7 @@ void bidi_add_tags(FriBidiChar *in,FriBidiChar *out,int limit,
 			is_number_env=FALSE;
 			if((new_level & 1) == 0) {
 				if(bidi_only_number(bidi_embed+i,in+i)){
-					tag=TAG_LTR_NUM;
+					tag=TAG_LATIN_DIGIT;
 					is_number_env=TRUE;
 				}
 				else {
