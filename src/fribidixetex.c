@@ -25,7 +25,7 @@ void help(void)
 			"                bidirectional support\n"
 			"       -m       replace '--'  &   '---'\n"
 			"                by   '\\fribidixetexLRE{--} & \\fribidixetexLRE{'---'}\n"
-			"       -n       no mirroring - do not mirror parethesis\n"
+			"       -n       no mirroring - do not mirror parenthesis\n"
 			"                for engines that do that natively (like XeTeX)\n"
 	);
 	exit(1);
